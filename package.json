@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "bin": "index.js",
+  "bin": {"6z0m9t-cli_number_guessing": "index.js"},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
