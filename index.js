@@ -1,22 +1,17 @@
 #! /usr/bin/env node
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const chalk_1 = __importDefault(require("chalk"));
-const inquirer_1 = __importDefault(require("inquirer"));
+import chalk from "chalk";
+import inquirer from "inquirer";
 // 1) computer will generate a random number, we can decide range of number.
 // 2) user input for guessing number, user will type his number in between range.
 // 3) computer will compare user input number with computer generated number and show result.
 function rainbowText(text) {
     const rainbowColors = [
-        chalk_1.default.red.bold.italic,
-        chalk_1.default.yellow.bold.italic,
-        chalk_1.default.green.bold.italic,
-        chalk_1.default.blue.bold.italic,
-        chalk_1.default.magenta.bold.italic,
-        chalk_1.default.cyan.bold.italic
+        chalk.red.bold.italic,
+        chalk.yellow.bold.italic,
+        chalk.green.bold.italic,
+        chalk.blue.bold.italic,
+        chalk.magenta.bold.italic,
+        chalk.cyan.bold.italic
     ];
     let coloredText = '';
     for (let i = 0; i < text.length; i++) {
@@ -26,7 +21,7 @@ function rainbowText(text) {
     return coloredText;
 }
 const randomNumber = Math.floor(Math.random() * 5 + 1);
-const answers = await inquirer_1.default.prompt([
+const answers = await inquirer.prompt([
     {
         name: "userGuessedNumber",
         type: "number",
@@ -35,8 +30,8 @@ const answers = await inquirer_1.default.prompt([
 ]);
 //console.log(rainbowText("\n *** Welcome To Number Guessing Game *** "));
 if (answers.userGuessedNumber === randomNumber) {
-    console.log(chalk_1.default.italic.bold.greenBright("\nCongratulation! You guessed a correct number."));
+    console.log(chalk.italic.bold.greenBright("\nCongratulation! You guessed a correct number."));
 }
 else {
-    console.log(chalk_1.default.italic.bold.yellowBright("\nPlease try again, You guessed a wrong number."));
+    console.log(chalk.italic.bold.yellowBright("\nPlease try again, You guessed a wrong number."));
 }
