@@ -1,5 +1,5 @@
-This is a CLI-Number Guessing Game.
+# This is a CLI-Number Guessing Game.
 <br>
-Author: Azmat Ali
+# Author: Azmat Ali
 <br>
-Project: 2.0
+# Project: 2.0
