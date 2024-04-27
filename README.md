@@ -1,7 +1,7 @@
-# CLI-Number-Guessing-Game
-<br>
+CLI-Number-Guessing-Game
+
 This is a Number Guessing Game
-<br>
+
 Author : Azmat Ali
-<br>
+
 Project : 2.0
